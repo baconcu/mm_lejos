@@ -20,12 +20,12 @@ public class FollowColor {
     while (Button.ESCAPE.isUp()) {
         light.fetchSample(sample, 0);
         LCD.drawString(String.valueOf(sample[0]), 1, 2);
-        if (sample[0] < 6) {
+      if (sample[0] < 6) {
             Button.LEDPattern(1);
-            pilot.arc(0, 10);
+            pilot.arc(0, 13);
         } else if (sample[0] > 6) {
             Button.LEDPattern(2);
-            pilot.arc(0, -10);
+            pilot.arc(0, -13);
         } else {
             if (pilot.isMoving() == false) {
                 pilot.forward();
